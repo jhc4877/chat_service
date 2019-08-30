@@ -3,7 +3,7 @@ var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);  // http server를 socket.io server로 upgrade
 
-app.get('/',function(req, res){  // localhost:3001번으로 서버로 접속하면 client.html전송
+app.get('/chat',function(req, res){  // localhost:3001번으로 서버로 접속하면 client.html전송
   res.sendFile(__dirname + '/client.html');
 });
 
