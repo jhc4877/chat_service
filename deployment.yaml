@@ -7,9 +7,9 @@ metadata:
   namespace: default
 spec:
   ports:
-    - port: 3001
+    - port: 8081
       protocol: TCP
-      targetPort: 3001
+      targetPort: 8081
   selector:
     app: chat-app
   type: NodePort
@@ -35,4 +35,4 @@ spec:
           image: gcr.io/ic-cloud-native/web-chat:latest
           imagePullPolicy: Always
           ports:
-            - containerPort: 3001
+            - containerPort: 8081
